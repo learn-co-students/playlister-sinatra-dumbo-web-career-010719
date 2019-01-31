@@ -1,0 +1,10 @@
+
+
+<%@Genre.songs.each do |song|%>
+    <ul>
+        <li><%=song.name%></li>
+        <ol>
+            <li><%=song.artist.name%></li>
+        </ol>
+    </ul>
+<%end%>
