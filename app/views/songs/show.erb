@@ -1,0 +1,20 @@
+<h1><%=@song.name%></h1>
+
+<label>Genres: </label>
+</br>
+<%@genres.each do |genre| %>
+  <p><a href="/genres/<%=genre.slug%>"><%=genre.name%></a></p>
+<% end %>
+
+</br>
+
+<label>Artist: </label>
+</br>
+  <p><a href="/artists/<%=@artist.slug%>"><%=@artist.name%></a></p>
+
+</br>
+
+<form action="/songs/<%=@song.slug%>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Song">
+</form>
